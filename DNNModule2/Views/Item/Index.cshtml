@@ -1,0 +1,68 @@
+﻿@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<IEnumerable<Chris.Modules.DNNModule2.Models.Item>>
+
+
+@using System.Text.RegularExpressions
+@using DotNetNuke.Web.Mvc.Helpers
+
+
+<div id="Items-@Dnn.ModuleContext.ModuleId">
+    <div id="container">
+        <h1>ITEMS</h1>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Resumé Name:</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Resume Name">
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputEmail4">First Name:</label>
+                <input type="text" class="form-control" id="inputEmail4" placeholder="First Name">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputPassword4">Last Name:</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Last Name">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputPassword4">Middle Name:</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Middle Name">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Address 1</label>
+                <input type="text" class="form-control" id="inputEmail4" placeholder="Address 1">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Address 2</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Address 2">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputEmail4">City:</label>
+                <input required type="text" class="form-control" id="inputEmail4" placeholder="City">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputPassword4">State:</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="State">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputPassword4">ZIP:</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="ZIP">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Phone Number:</label>
+                <input type="text" class="form-control" id="inputEmail4" placeholder="Phone Number">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">E-Mail:</label>
+                <input type="email" class="form-control" id="inputPassword4" placeholder="E-Mail">
+            </div>
+        </div>
+    </div>
+</div>

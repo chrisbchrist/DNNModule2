@@ -1,0 +1,69 @@
+﻿@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<Chris.Modules.DNNModule2.Models.Resume>
+
+@using System.Text.RegularExpressions
+@using DotNetNuke.Web.Mvc.Helpers
+
+
+<div id="Items-@Dnn.ModuleContext.ModuleId">
+    <div id="container">
+        <form method="post" action="@Url.Action("Create", "Resume")">
+            <div class="form-group">
+                <label for="exampleInputPassword1">Resumé Name:</label>
+                @Html.TextBoxFor(m => m.ResumeName, new { @class = "form-control", @placeholder = "Resume Name" })
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">First Name:</label>
+                    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", @placeholder = "First Name" })
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputPassword4">Last Name:</label>
+                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", @placeholder = "Last Name" })
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputPassword4">Middle Name:</label>
+                    @Html.TextBoxFor(m => m.MiddleName, new { @class = "form-control", @placeholder = "Middle Name" })
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Address 1</label>
+                    @Html.TextBoxFor(m => m.Address1, new { @class = "form-control", @placeholder = "Address 1" })
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Address 2</label>
+                    @Html.TextBoxFor(m => m.Address2 new { @class = "form-control", @placeholder = "Address 2" })
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">City:</label>
+                    @Html.TextBoxFor(m => m.City new { @class = "form-control", @placeholder = "City" })
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputPassword4">State:</label>
+                    @Html.TextBoxFor(m => m.State new { @class = "form-control", @placeholder = "State" })
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputPassword4">ZIP:</label>
+                    @Html.TextBoxFor(m => m.Zip new { @class = "form-control", @placeholder = "ZIP" })
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Phone Number:</label>
+                    @Html.TextBoxFor(m => m.Phone new { @class = "form-control", @placeholder = "Phone" })
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">E-Mail:</label>
+                    @Html.TextBoxFor(m => m.Email new { @class = "form-control", @placeholder = "E-mail" })
+                </div>
+            </div>
+            <button type="submit" class="dnnPrimaryAction">@Dnn.LocalizeString("Submit")</button>
+        </form>
+    </div>
+</div>
